@@ -1,5 +1,5 @@
 #include <iostream>
-#include <windows.h>
+#include <clocale> 
 
 void print_pyramid(const int* arr, int size) {
     std::cout << "Пирамида:\n";
@@ -30,9 +30,7 @@ void print_pyramid(const int* arr, int size) {
 
 int main() {
 
-    setlocale(LC_ALL, "Russian");
-    SetConsoleCP(1251);
-    SetConsoleOutputCP(1251);
+    std::setlocale(LC_ALL, "");
 
     int arr1[] = { 1, 3, 6, 5, 9, 8 };
     int size1 = sizeof(arr1) / sizeof(arr1[0]);
